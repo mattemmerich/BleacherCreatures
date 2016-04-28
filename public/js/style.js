@@ -1,24 +1,11 @@
 $(document).ready(function(){
+		$('#sign-up').on('click', function(){
+			$('#modal').css('visibility', 'visible')
+		})
+		$('#modal').on('click', function(){
+			$('#modal').hide();
+		})
 
-	$('.sign-in').on('click', function(){
-		$('.form').append('<div id="shade"></div>');
-		$('.form').append('')
-		$('#shade').on('click', function(){
-			$('#shade').remove();
-			})
-
-	})
-
-
-
-
-	// $('#open').on('click', function(){
-	// 	$('#shade').show();
-	// });
-
-	// 	$('#shade').on('click', function(){
-	// 		$('#shade').hide();
-		
-	// 	})
+	
 	
 })

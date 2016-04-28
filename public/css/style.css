@@ -14,7 +14,8 @@ body {
 }
 
 /*.form{*/
-/*#shade {
+#shade {
+	visibility: hidden;
 	background: #555555;
 	position: fixed;
 	width: 100%;
@@ -24,6 +25,7 @@ body {
 	display: none;
 }
 #modal{
+	visibility: hidden;
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -34,9 +36,8 @@ body {
 	height: 500px;
 	background: white;
 	text-align: center;
-}*/
+}
 
-/*button style*/
 
 
  /*user layout columns*/

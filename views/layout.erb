@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-	<script src="js/style.js"></script>
+	<script src="../js/style.js"></script>
 	<title>BLEACHER CREATURES</title>
 </head>
 
@@ -25,23 +25,18 @@
 				<span>- Logged in as <%= current_user.username %>- </span>
 			<% end %>
 		</h1>
+
+	<!-- 	<%=  %><button>Sign Out</button><%  %> -->
 	</div>
 
-	<%=yield %>
+	<%= yield %>
 
   <div id="footer">
   <h6>© 2016 Bleacher Creatures</h6>
   </div>
 
    
-<!-- 		
-		<div id="modal">
-    		<h4>Welcome to...</h4>
-  			<h1>MODAL COMBAT!!!</h1>
-  		</div>
-  	</div>
 
-  <p><a id="open">Modal</a></p> -->
 	
 </body>
 </html>

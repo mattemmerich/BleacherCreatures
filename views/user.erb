@@ -1,3 +1,4 @@
+
 <class id="left">
 
 <% if current_user == @user %>
@@ -16,6 +17,13 @@
 </class>
 
 <class id="middle">
+<form method="POST" action="/post">
+	<label for="title">Title</label>
+	<input type="text"></input>
+	<label for="body">What are you thinking?</label>
+	<textarea form="body"></textarea>
+	<input type="submit">
+</form>
 </class>
 
 <class id="right">
