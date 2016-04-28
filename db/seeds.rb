@@ -30,5 +30,5 @@ Post.create([
 
 
 
-
+#heroku run rake db:seed
 # rake db:seed this populates the database with temporary data
