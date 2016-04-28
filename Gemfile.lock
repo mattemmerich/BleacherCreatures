@@ -22,6 +22,8 @@ GEM
     minitest (5.8.4)
     multi_json (1.11.3)
     rack (1.6.4)
+    rack-flash3 (1.0.5)
+      rack
     rack-protection (1.5.3)
       rack
     rack-test (0.6.3)
@@ -53,6 +55,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  rack-flash3
   rake
   sinatra
   sinatra-activerecord
