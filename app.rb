@@ -7,7 +7,7 @@ require 'rack-flash'
 
 enable :sessions  
 use Rack::Flash, :sweep => true
-set :database, 'sqlite3:BleacherCreatures.sqlite3'
+configure(:development){set :database, 'sqlite3:BleacherCreatures.sqlite3'}
 set :sessions, true
 
 def current_user     
