@@ -21,10 +21,10 @@ get '/' do
 	erb :home
 end
 
-# get '/users/:id' do
-# 	@user = User.find(params[:id])
-# 	erb :show
-# end
+get '/users/:id' do
+	@user = User.find(params[:id])
+	erb :user
+end
 
 post '/sign-in' do  
 	puts params.inspect
@@ -32,7 +32,7 @@ post '/sign-in' do
 	if @user && @user.password == params[:login][:password]
 			session[:user_id] = @user.id
 			flash[:notice] = "You've been signed in successfully."
-			redirect "/posts/new"
+			redirect "/user"
 		else
 			flash[:alert] = "There was a problem signing you in."
 		end
