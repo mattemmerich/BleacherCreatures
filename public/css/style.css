@@ -3,28 +3,30 @@ body {
     margin: auto;
 }
 
-header {
+#header {
 		width: 100%;
 		height: 75px;
 		background-color: #0f1c43;
-		border: solid black;
-		font-color: white;
+		color: white;
+		padding-left: 20%;
+		font-style: bold;
+		font-size: 24pt;
 }
 
 .form{
 
 }
 
-.left{
+#left{
 	width: 30%;
 	background-color: #555555;
 	float: left;
 	font-family: font-family: "Book Antiqua",Palatino,"Palatino Linotype","Palatino LT STD",Georgia,serif;
-	font-color: white;
+	color: white;
 
 }
 
-.middle{
+#middle{
 	width: 30%;
 	background-color: #555555;
 	float: right;
@@ -33,7 +35,7 @@ header {
 
 }
 
-.right{
+#right{
 	width: 30%;
 	background-color: #555555;
 	float: right;
@@ -43,17 +45,19 @@ header {
 }
 
 
-footer{
+#footer{
 
 	width: 100%;
 	height: 25px;
-	position:absolute;
+	position: absolute;
   bottom: 0;
   background-color: #0f1c43;
+ 	color: white;
+ 	text-align: center;
 
 }
 }
-#shade {
+/*#shade {
 	background: #555555;
 	position: fixed;
 	width: 100%;
@@ -74,4 +78,4 @@ footer{
 	height: 500px;
 	background: white;
 	text-align: center;
-}
+}*/
