@@ -6,10 +6,10 @@
 users = User.create([
 	{email: "arod@nyy.com", fname: "Alex", lname: "Rodriguez", username: "NeverCaught", password: ""},
 	{email: "csab@nyy.com", fname: "CC", lname: "Sabathia", username: "CleanLife", password: "12345"},
-	{email: "jells@nyy.com", fname: "Jacoby", lname: "Ellsbury", username: "EllsburyDoughBoy", password: "12345"},
-	{email: "bgard@nyy.com", fname: "Brett", lname: "Gardner", username: "BrettDaJet", password: "12345"},
-	{email: "amill@nyy.com", fname: "Andrew", lname: "Miller", username: "LightsOut", password: "12345"},
-	{email: "mtan@nyy.com", fname: "Masahiro", lname: "Tanaka", username: "", password: "12345"}
+	{email: "rcano@nyy.com", fname: "Robinson", lname: "Cano", username: "DontChaknow", password: "12345"},
+	{email: "nswish@nyy.com", fname: "Nick", lname: "Swisher", username: "SwishTheDish", password: "12345"},
+	{email: "Jchamb@nyy.com", fname: "Joba", lname: "Chamberlin", username: "JobaTheHut", password: "12345"},
+	{email: "djeeter@nyy.com", fname: "Derek", lname: "Jeeter", username: "Jeets", password: "12345"}
 	])
 
 Post.create([
