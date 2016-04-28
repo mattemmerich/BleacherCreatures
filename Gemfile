@@ -2,13 +2,18 @@ source 'http://rubygems.org'
 
 gem 'sinatra'
 
-
 gem 'sinatra-activerecord'
 
 gem 'sinatra-reloader'
 
-gem 'sqlite3'
 
 gem 'rake'
 
-# gem 'rack-flash3'
+gem 'rack-flash3'
+
+group :development do
+	gem 'sqlite3'
+end
+group :production do
+	gem 'pg'
+end

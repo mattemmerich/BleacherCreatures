@@ -6,8 +6,18 @@
 	<script src="bleachercreatures/public/js/style.js"></script>
 	<title>BLEACHER CREATURES</title>
 </head>
-<body>
 
+<body>
+	<% if flash[:notice] %>     
+		<div class="flash notice">       
+			<%=flash[:notice] %>     
+		</div>   
+	<% end %>   
+	<% if flash[:alert] %>     
+		<div class="flash alert">       
+			<%=flash[:alert] %>     
+		</div>   
+	<% end %>
 
 	<div id="header">
 		<h1>BLEACHER CREATURES</h1>
