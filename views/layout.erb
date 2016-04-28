@@ -20,42 +20,28 @@
 	<% end %>
 
 	<div id="header">
-		<h1>BLEACHER CREATURES</h1>
+		<h1>BLEACHER CREATURES
+			<% if current_user %>
+				<span>- Logged in as <%= current_user.username %>- </span>
+			<% end %>
+		</h1>
 	</div>
 
-	
-	<class id="left">
-		<ul>
-		<li><h4>Followers</h4></li>
-		<li><h4>Following</h4></li>
-		<li><h4>Groups</h4></li>
-		</ul>
-	</class>
-
-	<class id="middle">
-	</class>
-
-	<class id="right">
-	</class>
-
-	<div id="shade">
-	</class>
-  
+	<%=yield %>
 
   <div id="footer">
   <h6>© 2016 Bleacher Creatures</h6>
   </div>
 
    
-		
-	<!-- 	<div id="modal">
+<!-- 		
+		<div id="modal">
     		<h4>Welcome to...</h4>
   			<h1>MODAL COMBAT!!!</h1>
   		</div>
   	</div>
 
-  <p><a id="open">Modal</a></p>
-<%=yield %>
+  <p><a id="open">Modal</a></p> -->
 	
 </body>
-</html> -->
+</html>
