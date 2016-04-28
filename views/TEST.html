@@ -1,23 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-	<script src="bleachercreatures/public/js/style.js"></script>
+	<link rel="stylesheet" type="text/css" href="public/css/style.css">
 	<title>BLEACHER CREATURES</title>
 </head>
-
 <body>
-	<% if flash[:notice] %>     
-		<div class="flash notice">       
-			<%=flash[:notice] %>     
-		</div>   
-	<% end %>   
-	<% if flash[:alert] %>     
-		<div class="flash alert">       
-			<%=flash[:alert] %>     
-		</div>   
-	<% end %>
+
 
 	<div id="header">
 		<h1>BLEACHER CREATURES</h1>
@@ -39,7 +27,6 @@
 	</class>
 
 	<div id="shade">
-	</class>
   
 
   <div id="footer">
@@ -47,15 +34,17 @@
   </div>
 
    
-		<!-- 
+		
 		<div id="modal">
     		<h4>Welcome to...</h4>
   			<h1>MODAL COMBAT!!!</h1>
   		</div>
   	</div>
 
-  <p><a id="open">Modal</a></p> -->
+  <p><a id="open">Modal</a></p>
 <%=yield %>
-	
+
 </body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script src="js/style.js"></script>
 </html>
