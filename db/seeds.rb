@@ -13,18 +13,18 @@ users = User.create([
 	])
 
 Post.create([
-	{user_id: users[0].id, title: "djhfakd", body: "hdkflah"},
-	{user_id: users[0].id, title: "djhfakd", body: "hdkflah"},
-	{user_id: users[0].id, title: "djhfakd", body: "hdkflah"},
-	{user_id: users[0].id, title: "djhfakd", body: "hdkflah"},
-	{user_id: users[0].id, title: "djhfakd", body: "hdkflah"},
-	{user_id: users[0].id, title: "djhfakd", body: "hdkflah"},
-	{user_id: users[0].id, title: "djhfakd", body: "hdkflah"},
-	{user_id: users[0].id, title: "djhfakd", body: "hdkflah"},
-	{user_id: users[0].id, title: "djhfakd", body: "hdkflah"},
-	{user_id: users[0].id, title: "djhfakd", body: "hdkflah"},
-	{user_id: users[0].id, title: "djhfakd", body: "hdkflah"},
-	{user_id: users[0].id, title: "djhfakd", body: "hdkflah"}
+	{user_id: users[0].id, title: "hey", body: "heyaaa"},
+	{user_id: users[0].id, title: "hello", body: "random post"},
+	{user_id: users[1].id, title: "whatup", body: "homerun"},
+	{user_id: users[1].id, title: "how are you", body: "double"},
+	{user_id: users[2].id, title: "byyee", body: "single"},
+	{user_id: users[2].id, title: "bubye", body: "triple"},
+	{user_id: users[3].id, title: "seeya", body: "for the cycle"},
+	{user_id: users[3].id, title: "cool", body: "gr double"},
+	{user_id: users[4].id, title: "nice", body: "strikeout"},
+	{user_id: users[4].id, title: "good", body: "walk"},
+	{user_id: users[5].id, title: "great", body: "ball"},
+	{user_id: users[5].id, title: "grand", body: "steal"}
 ])
 
 
