@@ -21,10 +21,10 @@ get '/' do
 	erb :home
 end
 
-# get '/users/:id' do
-# 	@user = User.find(params[:id])
-# 	erb :show
-# end
+get '/users/:id' do
+	@user = User.find(params[:id])
+	erb :user
+end
 
 post '/sign-in' do  
 	puts params.inspect
