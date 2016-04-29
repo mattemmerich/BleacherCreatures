@@ -3,7 +3,7 @@
 
 <% if current_user == @user %>
 	<h2> Edit Profile</h2>
-	<button>Change Password</button>
+	<a href="/edit"><button>Change Password</button></a>
 <% end %>
 	
 	<h2><%= @user.fname + " " + @user.lname %></h2>
