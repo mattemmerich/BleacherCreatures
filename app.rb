@@ -34,9 +34,9 @@ post '/sign-in' do
 			session[:user_id] = @user.id
 			flash[:notice] = "You've been signed in successfully."
 			redirect "/user"
-		else
+	else
 			flash[:alert] = "There was a problem signing you in."
-		end
+	end
 	redirect "/"
 end
 
@@ -46,6 +46,11 @@ get '/signout' do
 	redirect to('/')
 end
 
+
+post '/change-password' do
+	if current_user.password == params[:password][:newpassword]
+	end
+end
 
 
 # get '/post' do
