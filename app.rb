@@ -23,21 +23,30 @@ end
 
 
 get '/users/:id' do
+	# @user = current_user
 	@user = User.find(params[:id])
 	erb :user
 end
 
 post '/sign-in' do  
 	puts params.inspect
-	@user = User.where(username: params[:login][:username]).first   
-	if @user && @user.password == params[:login][:password]
-			session[:user_id] = @user.id
-			flash[:notice] = "You've been signed in successfully."
-			redirect "/user"
+
+	@user = User.where(username: params[:username]).first   
+	if @user && @user.password == params[:password]
+		session[:user_id] = @user.id
+		flash[:notice] = "You've been signed in successfully."
+		redirect "/users/#{current_user.id}"
 	else
-			flash[:alert] = "There was a problem signing you in."
+		flash[:alert] = "There was a problem signing you in."
+		redirect "/"
 	end
-	redirect "/"
+end
+
+post '/sign-up' do
+	puts params.inspect
+	@user = User.new({fname: params[:fname]}, {lname: params[:lname]}, {username: params[:username]}, {email: params[:email]}, {password: params[:password]})
+	redirect '/users/#{current_user.id}'
+
 end
 
 
