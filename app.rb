@@ -28,6 +28,10 @@ get '/users/:id' do
 	erb :user
 end
 
+get '/edit' do
+	erb :edit
+end
+
 post '/sign-in' do  
 	puts params.inspect
 
@@ -46,7 +50,6 @@ post '/sign-up' do
 	puts params.inspect
 	@user = User.new({fname: params[:fname]}, {lname: params[:lname]}, {username: params[:username]}, {email: params[:email]}, {password: params[:password]})
 	redirect '/users/#{current_user.id}'
-
 end
 
 
