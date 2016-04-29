@@ -65,6 +65,10 @@ post '/change-password' do
 	end
 end
 
+post '/delete-account' do
+	if current_user.password == params [:password][:delete_account]
+	end
+end
 
 post '/new-post' do
 	post = Post.create({post_id: params[:post_id]})
