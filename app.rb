@@ -48,8 +48,9 @@ end
 
 post '/sign-up' do
 	puts params.inspect
-	@user = User.new({fname: params[:fname]}, {lname: params[:lname]}, {username: params[:username]}, {email: params[:email]}, {password: params[:password]})
-	redirect '/users/#{current_user.id}'
+	@user = User.new(fname: params[:fname], lname: params[:lname], username: params[:username], email: params[:email], password: params[:password])
+	@user.save
+	redirect "/users/#{current_user.id}"
 end
 
 
@@ -65,11 +66,7 @@ post '/change-password' do
 end
 
 
-# get '/post' do
-# 	erb :
-# end
-
-# post '/posts/create' do
-# 	post = Post.create(params[:post])
-# 	redirect '/posts/#{post.id}'
-# end	
+post '/new-post' do
+	post = Post.create({post_id: params[:post_id]})
+	# redirect '/user/#{current_user.id}'
+end	
