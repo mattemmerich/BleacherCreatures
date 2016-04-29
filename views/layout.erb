@@ -6,6 +6,8 @@
 	<script src="../js/style.js"></script>
 
 	<title>BLEACHER CREATURES</title>
+
+
 </head>
 
 <body>
@@ -23,11 +25,13 @@
 	<div id="header">
 		<h1>BLEACHER CREATURES
 			<% if current_user %>
-				<span>-<h3> Logged in as <%= current_user.username %>-</h3></span>
+				<span><h3> Hello <%= current_user.username %> | <a href="/">sign out</a>
+				</h3></span>
+			<% else %>
+				<a href="/"> </a>
 			<% end %>
 		</h1>
 
-	<!-- 	<%=  %><button>Sign Out</button><%  %> -->
 	</div>
 
 	<%= yield %>

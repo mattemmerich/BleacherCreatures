@@ -40,15 +40,14 @@ post '/sign-in' do
 	redirect "/"
 end
 
-# def sign_out 
-# 	if session[:user_id] 
-# 		@current_user = nil
-# 		redirect '/'
-# 	end 
-# end
+get '/signout' do
+	session[:user_id] = nil
+	redirect to('/')
+end
 
-# get '/post/new' do
-# 	erb :new_post
+
+# get '/post' do
+# 	erb :
 # end
 
 # post '/posts/create' do
