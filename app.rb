@@ -12,7 +12,8 @@ set :sessions, true
 
 def current_user     
 	if session[:user_id]
-		@current_user = User.find(session[:user_id])  
+		@current_user = User.find(session[:user_id]) 
+	else @user = nil 
 	end
 end
 
@@ -62,16 +63,19 @@ end
 
 
 post '/change-password' do
-	if current_user.password == params[:password][:newpassword]
-	end
+	@user = current_user
+	current_user.update(password: params[:newpassword])
+	
 end
 
 post '/delete-account' do
-	if current_user.password == params [:password][:delete_account]
-	end
+	 @user = current_user 
+	 @user.delete
+	 redirect '/'
 end
 
 post '/new-post' do
 	post = Post.create({post_id: params[:post_id]})
 	# redirect '/user/#{current_user.id}'
 end	
+
