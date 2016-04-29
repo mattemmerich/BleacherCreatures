@@ -43,7 +43,7 @@ end
 
 post '/sign-up' do
 	puts params.inspect
-	@user = User.create({fname: params[:fname]}, {lname: params[:lname]}, {username: params[:username]}, {email: params[:email]}, {password: params[:password]})
+	@user = User.new({fname: params[:fname]}, {lname: params[:lname]}, {username: params[:username]}, {email: params[:email]}, {password: params[:password]})
 	redirect '/users/#{current_user.id}'
 end
 
