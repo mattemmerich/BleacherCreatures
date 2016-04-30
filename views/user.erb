@@ -18,7 +18,7 @@
 	
 	<% User.all.each do |u| %>
 		<ul>
-			<li><a href="/users/"><%= u.username %></a></li>
+			<li><a href="/others/:username"><%= u.username %></a></li>
 		</ul>
 	<% end %>
 
@@ -42,7 +42,7 @@
 
 <div id="right">
 	<% @posts.each do |p| %>
-		<p><%= p.title%></p>
+		<h4><%= p.title%></h4>
 		<p><%= p.body%></p>
 	<% end %>
 

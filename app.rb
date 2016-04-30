@@ -13,7 +13,6 @@ set :sessions, true
 def current_user     
 	if session[:user_id]
 		@current_user = User.find(session[:user_id]) 
-	# else @user = nil 
 	end
 end
 
@@ -31,9 +30,16 @@ get '/users/:id' do
 end
 
 get '/users_profile' do
+
 	@user = current_user
 	@posts = @user.posts
 	erb :user
+end
+
+get '/others/:id' do
+	@user = User.find(params[:username])
+	@posts = @user.posts
+	erb :user 
 end
 
 get '/edit' do
