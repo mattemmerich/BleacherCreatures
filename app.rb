@@ -19,13 +19,15 @@ end
 
 get '/' do
 	@users = User.all
+	@posts = Post.all
 	erb :home
 end
 
 
 get '/users/:id' do
-	# @user = current_user
+	@user = current_user
 	@user = User.find(params[:id])
+	@posts = @user.posts
 	erb :user
 end
 
@@ -75,7 +77,7 @@ post '/delete-account' do
 end
 
 post '/new-post' do
-	post = Post.create({post_id: params[:post_id]})
-	# redirect '/user/#{current_user.id}'
+	post = Post.create(user_id: current_user.id, title: params[:title], body: params[:body])
+	redirect '/'
 end	
 

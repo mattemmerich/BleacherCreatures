@@ -1,6 +1,9 @@
 
 <button id="open">Start Here!</button>
 
+<% if current_user == @user %>
+	<a href="/users/:id">Profile Page</a>
+<% end %>
 
 <div class="modal-wrapper">
 	<div class="modal">
@@ -42,6 +45,12 @@
 	</div>
 
 </div>
+
+<% @posts.each do |p| %> 
+	<p><%= p.title %></p>
+	<p><%= p.body %></p>
+	<hr>
+<% end %>
 
 
 
