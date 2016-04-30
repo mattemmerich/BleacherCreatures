@@ -1,11 +1,9 @@
 
-<class id="left">
+<!-- user can edit their profile with these links -->
+<div id="left">
 
-<% if current_user == @user %>
+<% if current_user %>
 	<h2> Edit Profile</h2>
-
-
-	
 
 	<a href="/edit"><button>Change Password</button></a>
 	<a href="/edit"><button>Delete Button</button>
@@ -15,15 +13,24 @@
 	
 	<h2><%= @user.fname + " " + @user.lname %></h2>
 	<p><%= @user.username %></p>
+	
+	<h3>Other Users to follow</h3>
+	
+	<% User.all.each do |u| %>
+		<ul>
+			<li><a href="/users/"><%= u.username %></a></li>
+		</ul>
+	<% end %>
+
 	<ul>
 		<li><h4>Followers</h4></li>
 		<li><h4>Following</h4></li>
 		<li><h4>Groups</h4></li>
 	</ul>
 	
-</class>
+</div>
 
-<class id="middle">
+<div id="middle">
 <form method="POST" action="/new-post">
 	<label for="title">Title</label>
 	<input name="title" type="text"></input>
@@ -31,16 +38,16 @@
 	<textarea name="body" form="body"></textarea>
 	<input type="submit">
 </form>
-</class>
+</div>
 
-<class id="right">
+<div id="right">
 	<% @posts.each do |p| %>
 		<p><%= p.title%></p>
 		<p><%= p.body%></p>
 	<% end %>
 
 
-</class>
+</div>
 
 <div id="shade">
-</class>
+</div>

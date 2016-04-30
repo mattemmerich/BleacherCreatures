@@ -1,8 +1,10 @@
 
 <button id="open">Start Here!</button>
 
-<% if current_user == @user %>
-	<a href="/users/:id">Profile Page</a>
+<% if current_user  %>
+	
+	<a href="/users_profile">Profile Page</a>
+
 <% end %>
 
 <div class="modal-wrapper">
