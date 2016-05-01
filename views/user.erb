@@ -35,12 +35,13 @@
 	<label for="title">Title</label>
 	<input name="title" type="text"></input>
 	<label for="body">What are you thinking?</label>
-	<textarea name="body" form="body"></textarea>
+	<textarea name="body"></textarea>
 	<input type="submit">
 </form>
 </div>
 
 <div id="right">
+	
 	<% @posts.each do |p| %>
 		<h4><%= p.title%></h4>
 		<p><%= p.body%></p>

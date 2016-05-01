@@ -30,15 +30,13 @@ get '/users/:id' do
 end
 
 get '/users_profile' do
-
 	@user = current_user
 	@posts = @user.posts
 	erb :user
 end
 
-get '/others/:id' do
-	@user = User.find(params[:username])
-	@posts = @user.posts
+get '/others/:username' do
+	@user =User.find(params[:username])
 	erb :user 
 end
 
@@ -48,7 +46,6 @@ end
 
 post '/sign-in' do  
 	puts params.inspect
-
 	@user = User.where(username: params[:username]).first   
 	if @user && @user.password == params[:password]
 		session[:user_id] = @user.id
@@ -62,7 +59,7 @@ end
 
 post '/sign-up' do
 	puts params.inspect
-	@user = User.new(fname: params[:fname], lname: params[:lname], username: params[:username], email: params[:email], password: params[:password])
+	@user = User.create(fname: params[:fname], lname: params[:lname], username: params[:username], email: params[:email], password: params[:password])
 	@user.save
 	session[:user_id] = @user.id
 	redirect "/users/#{current_user.id}"
