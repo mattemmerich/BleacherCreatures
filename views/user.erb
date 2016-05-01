@@ -19,7 +19,7 @@
 	<% User.all.each do |u| %>
 		<ul>
 			<% :id == @user.id%>
-				<li><a href="/users/:id"><%= u.username %></a></li>	
+				<li class="other-users"><a href="/users/:id"><%= u.username %></a></li>	
 		</ul>
 	<% end %>
 
@@ -34,8 +34,11 @@
 <div id="middle">
 	<form method="POST" action="/new-post">
 		<label for="title">Title</label>
+		<br>
 		<input name="title" type="text"></input>
+		<br>
 		<label for="body">What are you thinking?</label>
+		<br>
 		<textarea name="body"></textarea>
 		
 		<input type="submit">
@@ -43,7 +46,7 @@
 </div>
 
 <div id="right">
-	
+	<h2>Your posts!</h2>
 	<% @posts.each do |p| %>
 		<h4><%= p.title%></h4>
 		<p><%= p.body%></p>

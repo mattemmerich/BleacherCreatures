@@ -5,12 +5,22 @@ body {
 /*Header for all pages*/
 #header {
 		width: 100%;
-		height: 75px;
+		height: 25%;
 		background-color: #0f1c43;
 		color: white;
 		padding-left: 20%;
-		font-style: bold;
-		font-size: 24pt;
+	/*	display: inline;
+*/}
+
+#header a{
+	background-color: #0f1c43;
+	font-style: bold;
+	font-size: 2em;
+	text-decoration: none;
+	color: white;
+	display: inline;
+	padding: 0;
+	margin: 0 auto;
 }
 
 /*.form{*/
@@ -42,7 +52,22 @@ body {
 
  /*user layout columns*/
 #left{
-	width: 30%;
+	width: 20%;
+	padding: 2%;
+	background-color: #555555;
+	float: left;
+	font-family: font-family: "Book Antiqua",Palatino,"Palatino Linotype","Palatino LT STD",Georgia,serif;
+	color: white;
+
+}
+.other-users a{
+	text-decoration: none;
+	color: white;
+}
+
+#middle{
+	width: 20%;
+	padding: 10%;
 	background-color: #555555;
 	float: left;
 	font-family: font-family: "Book Antiqua",Palatino,"Palatino Linotype","Palatino LT STD",Georgia,serif;
@@ -50,17 +75,9 @@ body {
 
 }
 
-#middle{
-	width: 30%;
-	background-color: #555555;
-	float: right;
-	font-family: font-family: "Book Antiqua",Palatino,"Palatino Linotype","Palatino LT STD",Georgia,serif;
-	color: white;
-
-}
-
 #right{
 	width: 30%;
+	padding: 0;
 	background-color: #555555;
 	float: right;
 	font-family: font-family: "Book Antiqua",Palatino,"Palatino Linotype","Palatino LT STD",Georgia,serif;
@@ -70,18 +87,15 @@ body {
 
 /*footer for all pages*/
 #footer{
-
+	clear: both;
 	width: 100%;
 	height: 25px;
-	position: absolute;
   bottom: 0;
   background-color: #0f1c43;
  	color: white;
  	text-align: middle;
 
 }
-
-
 
 #overlay {
     position: fixed; 
@@ -104,7 +118,7 @@ body {
 			text-align: center;
 		}
 
-		.modal-wrapper {
+.modal-wrapper {
 			background-color: rgba(0, 0, 0, .7 );
 			width: 100%;
 			height: 100%;
