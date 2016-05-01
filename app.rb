@@ -26,6 +26,7 @@ end
 get '/users/:id' do
 	@user = User.find(params[:id])
 	@posts = @user.posts
+	posts = Post.order('created_at DESC').limit(10)
 	erb :user
 end
 

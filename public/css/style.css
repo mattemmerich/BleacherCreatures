@@ -22,6 +22,12 @@ body {
 	padding: 0;
 	margin: 0 auto;
 }
+#open{
+	font-size: 24px;
+	background-color: white;
+	color: #0F1C43;
+	border-radius: 12px;
+}
 
 /*.form{*/
 #shade {
@@ -47,7 +53,13 @@ body {
 	background: white;
 	text-align: center;
 }
-
+#all-posts{
+	text-align: center;
+	color: white;
+	font-family: font-family: "Book Antiqua",Palatino,"Palatino Linotype","Palatino LT STD",Georgia,serif;
+	/*padding: 10px;*/
+	margin: 10%;
+}
 
 
  /*user layout columns*/

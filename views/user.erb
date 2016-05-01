@@ -10,10 +10,10 @@
 	</a>
 
 <% end %>
-	
+	<hr>
 	<h2><%= @user.fname + " " + @user.lname %></h2>
 	<p><%= @user.username %></p>
-	
+	<hr>
 	<h3>Other Users to follow</h3>
 	
 	<% User.all.each do |u| %>
@@ -22,7 +22,7 @@
 				<li class="other-users"><a href="/users/:id"><%= u.username %></a></li>	
 		</ul>
 	<% end %>
-
+	<hr>
 	<ul>
 		<li><h4>Followers</h4></li>
 		<li><h4>Following</h4></li>
@@ -47,6 +47,7 @@
 
 <div id="right">
 	<h2>Your posts!</h2>
+	<hr>
 	<% @posts.each do |p| %>
 		<h4><%= p.title%></h4>
 		<p><%= p.body%></p>

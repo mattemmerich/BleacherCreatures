@@ -47,13 +47,17 @@
 	</div>
 
 </div>
+
+<div id="all-posts">
 <h2>What the team is talking about!</h2>
+<hr>
 <% @posts.each do |p|%> 
 	<h4><%= p.title%></h4>
 	<p><%= p.body%></p>
 	<h5><%= p.user_id%></h5>
 	<hr>
 <% end %>
+</div>
 
 
 
