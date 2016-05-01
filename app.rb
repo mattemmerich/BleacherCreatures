@@ -35,9 +35,9 @@ get '/users_profile' do
 	erb :user
 end
 
-get '/others/:username' do
+get '/others/:id' do
 	@user =User.find(params[:username])
-	erb :user 
+	redirect '/users/:id' 
 end
 
 get '/edit' do
@@ -68,16 +68,15 @@ end
 
 get '/signout' do
 	session[:user_id] = nil
-	redirect to('/')
+	redirect '/'
 end
 
 
 post '/change-password' do
 	@user = current_user
-	current_user.update(password: params[newpassword:])
+	if current_user.update(password: params[:newpassword])
 		flash[:success] = "Password successfully changed!"
-		redirect to('/')
-		
+		redirect '/'
 	else
 		flash[:danger] = "Your old password was incorrect. Please try again."
 		redirect to user path(@current_user)
@@ -91,7 +90,8 @@ post '/delete-account' do
 end
 
 post '/new-post' do
-	post = Post.create(user_id: current_user.id, title: params[:title], body: params[:body])
+	@user = current_user
+	@post = Post.create(user_id: current_user.username, title: params[:title], body: params[:body])
 	redirect '/'
 end	
 

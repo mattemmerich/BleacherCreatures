@@ -18,7 +18,7 @@
 	
 	<% User.all.each do |u| %>
 		<ul>
-			<li><a href="/others/:username"><%= u.username %></a></li>
+			<li><a href="/others/:id"><%= u.username %></a></li>
 		</ul>
 	<% end %>
 
@@ -31,13 +31,14 @@
 </div>
 
 <div id="middle">
-<form method="POST" action="/new-post">
-	<label for="title">Title</label>
-	<input name="title" type="text"></input>
-	<label for="body">What are you thinking?</label>
-	<textarea name="body"></textarea>
-	<input type="submit">
-</form>
+	<form method="POST" action="/new-post">
+		<label for="title">Title</label>
+		<input name="title" type="text"></input>
+		<label for="body">What are you thinking?</label>
+		<textarea name="body"></textarea>
+		
+		<input type="submit">
+	</form>
 </div>
 
 <div id="right">
@@ -50,5 +51,4 @@
 
 </div>
 
-<div id="shade">
-</div>
+
