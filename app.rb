@@ -77,13 +77,19 @@ end
 
 post '/change-password' do
 	@user = current_user
-	current_user.update(password: params[:newpassword])
-	
+	current_user.update(password: params[newpassword:])
+		flash[:success] = "Password successfully changed!"
+		redirect to('/')
+		
+	else
+		flash[:danger] = "Your old password was incorrect. Please try again."
+		redirect to user path(@current_user)
+	end
 end
 
 post '/delete-account' do
 	 @user = current_user 
-	 @user.delete
+	 @user.destroy_all
 	 redirect '/'
 end
 
