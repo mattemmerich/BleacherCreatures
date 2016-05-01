@@ -35,9 +35,9 @@ get '/users_profile' do
 	erb :user
 end
 
-get '/others/:id' do
-	@user =User.find(params[:username])
-	redirect '/users/:id' 
+get '/users/:user_id' do
+	@user = User.paginate
+	redirect '/users/:id'
 end
 
 get '/edit' do
@@ -91,7 +91,7 @@ end
 
 post '/new-post' do
 	@user = current_user
-	@post = Post.create(user_id: current_user.username, title: params[:title], body: params[:body])
+	@post = Post.create(user_id: user_id.username, title: params[:title], body: params[:body])
 	redirect '/'
 end	
 

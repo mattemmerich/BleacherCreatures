@@ -18,7 +18,8 @@
 	
 	<% User.all.each do |u| %>
 		<ul>
-			<li><a href="/others/:id"><%= u.username %></a></li>
+			<% :id == @user.id%>
+				<li><a href="/users/:id"><%= u.username %></a></li>	
 		</ul>
 	<% end %>
 
