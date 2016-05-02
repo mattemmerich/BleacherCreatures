@@ -18,15 +18,14 @@ end
 
 get '/' do
 	@users = User.all
-	@posts = Post.all
+	@posts = Post.last(10).reverse
 	erb :home
 end
 
 
 get '/users/:id' do
 	@user = User.find(params[:id])
-	@posts = @user.posts
-	posts = Post.order('created_at DESC').limit(10)
+	@posts = @user.posts.last(10)
 	erb :user
 end
 
@@ -38,7 +37,7 @@ end
 
 get '/users/:user_id' do
 	@user = User.paginate
-	redirect '/users/:id'
+	redirect '/users/#{:user_id}'
 end
 
 get '/edit' do
@@ -92,7 +91,7 @@ end
 
 post '/new-post' do
 	@user = current_user
-	@post = Post.create(user_id: user_id.username, title: params[:title], body: params[:body])
+	@post = Post.create(user_id: params[:user_id], title: params[:title], body: params[:body])
 	redirect '/'
 end	
 
